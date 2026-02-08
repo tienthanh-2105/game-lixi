@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Game Lì Xì Tết 🎉</title>
+<style>
+body{
+    font-family: Arial;
+    text-align:center;
+    background:#ff4d4d;
+    color:white;
+}
+h1{margin-top:40px;}
+button{
+    padding:15px 25px;
+    font-size:20px;
+    background:gold;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+#result{
+    margin-top:30px;
+    font-size:24px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🧧 Game Lì Xì Tết 🧧</h1>
+<p>Bấm để mở bao lì xì đầu năm!</p>
+
+<button onclick="liXi()">Mở Lì Xì</button>
+
+<div id="result"></div>
+
+<script>
+function liXi(){
+
+    let tien = [10000,20000,50000,100000,200000,500000];
+    let chucTet = [
+        "Chúc bạn phát tài phát lộc 💰",
+        "Năm mới bình an 😄",
+        "Học giỏi điểm cao 📚",
+        "Code không bug 🧑‍💻",
+        "Tiền vô như nước 💸",
+        "Tình duyên nở rộ ❤️"
+    ];
+
+    let randomTien = tien[Math.floor(Math.random()*tien.length)];
+    let randomChuc = chucTet[Math.floor(Math.random()*chucTet.length)];
+
+    document.getElementById("result").innerHTML =
+    "Bạn nhận được: <b>"+randomTien.toLocaleString()+"đ</b><br>"+randomChuc;
+}
+</script>
+
+</body>
+</html>
